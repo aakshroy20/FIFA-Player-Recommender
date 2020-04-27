@@ -1,0 +1,145 @@
+body {
+ margin: 0;
+ padding: 0;
+ background: #99ff99;
+}
+
+.search_player {
+ position: absolute;
+ top: 15%;
+ left: 48.5%;
+ transform: translate(-50%, -50%);
+ background: #2f3640;
+ height: 40px;
+ border-radius: 40px;
+ padding: 10px;
+}
+
+
+.search_player:hover > .search_player_txt {
+ width: 240px;
+ padding: 0 6px;
+}
+
+.search_player:hover > .search_player_btn {
+ background: white;
+ color: black;
+}
+
+.search_player_btn {
+ color: #20B2AA ;
+ float: right;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background: #2f3640;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.4s;
+ color: white;
+ cursor: pointer;
+}
+
+.search_player_btn > i {
+ font-size: 30px;
+}
+
+.search_player_txt {
+ border: none;
+ background: none;
+ outline: none;
+ float: left;
+ padding: 0;
+ color: white;
+ font-size: 16px;
+ transition: 0.4s;
+ line-height: 40px;
+ width: 0px;
+ font-weight: bold;
+}
+
+
+
+.results_container_rectangle_1{
+    display: block;
+    border-radius: 25px;
+    /* border: 2px solid  #2f3640; */
+    background-color: #2f3640;
+    border: 2px solid blue;
+    color: dodgerblue;
+    padding: 20px;
+    margin-left: 85px;
+    margin-top: 170px;
+    width: 200px;
+    height: 250px;
+    float: left;
+    position:relative;
+    
+
+}
+
+.results_container_rectangle_2{
+    display: block;
+    border-radius: 25px;
+    border: 2px solid  blue;
+    background-color: #2f3640;
+    color: dodgerblue;
+    padding: 20px;
+    margin-left:30px;
+    margin-top: 550px;
+    width: 200px;
+    height: 250px;
+    float: left;
+    position:relative
+}
+
+.results_container_rectangle_3{
+    display: block;
+    border-radius: 25px;
+    border: 2px solid  blue; 
+    background-color: #2f3640;
+    color: dodgerblue;
+    padding: 20px;
+    margin-left:155px;
+    margin-top: 550px;
+    width: 200px;
+    height: 250px;
+    float: left;
+    position:relative
+}
+
+
+
+.results_container_rectangle_5{
+    display: block;
+    border-radius: 25px;
+    border: 2px solid blue;
+    background-color: #2f3640;
+    color: dodgerblue;
+    padding: 20px;
+    margin-right: 75px;
+    margin-top: 170px;
+    width: 200px;
+    height: 250px;
+    float: left;
+    position:relative;
+
+}
+
+
+.results_container_rectangle_6{
+    display: block;
+    border-radius: 25px;
+    border: 2px solid whitesmoke;
+    background-color: #2f3640;
+    color: white;
+    padding: 20px;
+    margin-left: 555px;
+    margin-top: -655px;
+    width: 200px;
+    height: 250px;
+    float: left;
+    position:relative
+
+}
