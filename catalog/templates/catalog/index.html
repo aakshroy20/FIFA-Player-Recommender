@@ -1,40 +1,39 @@
 {% load static %}
-
 <!DOCTYPE html>
 
-<html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
-<head>
-  <meta charset="UTF-8">
-  <title>Recommending FIFA Players</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" >
-  
-</head>
-{%block content%}
-<body>
- <div class="login">
-	<h1>FIFA Player Recommendations </h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css" >
+    <script src="{% static 'js/index.js' %}"></script>
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form method="post" role="form">{%csrf_token%}
-    	<input type="text" id="player_name" name="player_name" placeholder="Enter name of the player " required="required" />
-       
-        <button type="submit" class="btn btn-primary btn-block btn-large">Recommend</button>
-    </form>
-
-   <br>
-   <br>
-    <p style="color:darkcyan">{{ supporting_text}}</p>
-   {% for name in list_of_names %}
-        {{name}}<br>
-   {% endfor %}
- </div>
-
-
-</body>
-{%endblock content%}
+    <title>FIFA Recommendation System</title>
+  </head>
+  <body>
+     <h1 style="text-align:center">FIFA 20 Player Recommender</h1>
+    <form id="myForm"  method="post">{%csrf_token%}
+      <div class="search_player">  
+        <input type="text" name="player_name" class="search_player_txt" 
+        placeholder="Enter Player Name...." oninput="getValue()">
+        <!-- <input type='submit' value='Submit'> -->
+        <a class="search_player_btn">
+          <i class="material-icons instant-search__icon">search</i>
+        </a>
+        <br>
+        <br>
+        <br>
+        <h2 style="color:darkbrown">{{supporting_text}}</h2>
+      </div>
+    </form>  
+ 
+    <div id = "p0" class="results_container_rectangle_0"> <h2 style="text-align:center"> </h2></div>
+    <div id = "p1" class="results_container_rectangle_1"> <h2 style="text-align:center">{{ recommendedNames1 }} </h2></div>
+    <div id = "p2" class="results_container_rectangle_2"> <h2 style="text-align:center">{{ recommendedNames2 }} </h2></div>
+    <div id = "p3" class="results_container_rectangle_3"> <h2 style="text-align:center">{{ recommendedNames3 }} </h2></div>
+    
+    <div id = "p5" class="results_container_rectangle_5"> <h2 style="text-align:center">{{ recommendedNames5 }} </h2></div>
+    <div id = "p6" class="results_container_rectangle_6"> <h2 style="text-align:center">{{ searchedName }} </h2></div>
+  </body>
 </html>
